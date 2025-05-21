@@ -95,7 +95,7 @@ nav ul li:hover::after {
 	line-height: 1.1;
 	word-spacing: 0.5rem;
 	font-style: italic;
-	opacity: 45%;
+	opacity: 35%;
 }
 
 #header h1 {
