@@ -120,6 +120,7 @@ nav ul li:hover::after {
 	border: 0;
 	font-family: 'Microsoft YaHei', sans-serif;
 	width: 100%;
+	opacity: 60%;
 }
 
 #header p {
@@ -136,6 +137,7 @@ nav ul li:hover::after {
 	border: 0;
 	font-family: 'Microsoft YaHei', sans-serif;
 	width: 100%;
+	opacity: 60%;
 	
 }
 
