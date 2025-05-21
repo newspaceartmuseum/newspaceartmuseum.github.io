@@ -103,7 +103,7 @@ nav ul li:hover::after {
 	line-height: 1.1;
 	word-spacing: 0.5rem;
 	text-shadow: 0px 6px 0px grey;
-	word-spacing: 1.5rem;
+	letter-spacing: 1rem;
 }
 
 #header p {
