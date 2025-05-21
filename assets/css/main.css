@@ -63,7 +63,6 @@ nav ul li:hover::after {
 /* ========== Header Section ========== */
 #header {
 	background-image: url('../../images/background1.png');
-	background-attachment: fixed;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
