@@ -117,7 +117,7 @@ nav ul li:hover::after {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 5vh 5vw;
+  /*padding: 5vh 5vw;*/
   height: auto;
   width: 100%;
 }
