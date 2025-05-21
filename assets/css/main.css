@@ -1,7 +1,7 @@
 /*========navigation========*/
-
+/*
 nav {
-	background: rgba(0, 0, 0, 0.7); /* 透明黑色 */
+	background: rgba(0, 0, 0, 0.7); 
 	opacity: 0.5;
 	padding: 0.3rem 1.5rem;
 	box-shadow: 0 1.5rem 1rem -0.8rem rgba(0, 0, 0, 0.2);
@@ -10,7 +10,7 @@ nav {
 	left: 50%;
 	transform: translateX(-50%);
 	width: 100%;
-	max-width: 1200px; /* 与背景图片最大宽度保持一致，可根据实际背景宽度调整 */
+	max-width: 1200px; 
 	min-width: 0;
 	z-index: 1000;
 }
@@ -29,7 +29,7 @@ nav ul li {
 	margin: 0 0.3rem;
 	font-size: 1rem;
 	font-weight: 500;
-	color: #fff; /* 白色字体更适合深色背景 */
+	color: #fff; 
 	cursor: pointer;
 	position: relative;
 	z-index: 2;
@@ -56,7 +56,7 @@ nav ul li:hover::after {
 	top: 20%;
 	opacity: 1;
 }
-
+*/
 
 
 
