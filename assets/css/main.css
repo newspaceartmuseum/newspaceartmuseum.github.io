@@ -85,7 +85,7 @@ nav ul li:hover::after {
 }
 
 #header h2 {
-	font-size: 4rem;
+	font-size: 2rem;
 	font-weight: bold;
 	margin: 0;
 	padding: 0;
@@ -95,7 +95,7 @@ nav ul li:hover::after {
 	line-height: 1.1;
 	word-spacing: 0.5rem;
 	font-style: italic;
-	opacity: 60%;
+	opacity: 45%;
 }
 
 #header h1 {
