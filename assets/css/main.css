@@ -95,7 +95,7 @@ nav ul li:hover::after {
 	line-height: 1.1;
 	word-spacing: 0.5rem;
 	font-style: italic;
-	opacity: 80%;
+	opacity: 60%;
 }
 
 #header h1 {
@@ -113,14 +113,14 @@ nav ul li:hover::after {
 }
 
 #header h3 {
-	font-size: 3rem;
+	font-size: 4.5rem;
 	font-weight: bold;
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-family: 'Microsoft YaHei', sans-serif;
 	width: 100%;
-	opacity: 60%;
+	opacity: 80%;
 }
 
 #header p {
@@ -130,14 +130,14 @@ nav ul li:hover::after {
 }
 
 #header h4 {
-	font-size: 1.5rem;
+	font-size: 2rem;
 	font-weight: bold;
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-family: 'Microsoft YaHei', sans-serif;
 	width: 100%;
-	opacity: 60%;
+	opacity: 80%;
 	
 }
 
