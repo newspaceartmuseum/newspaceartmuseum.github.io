@@ -118,6 +118,8 @@ nav ul li:hover::after {
   background-position: center;
   background-repeat: no-repeat;
   padding: 5vh 5vw;
+  height: 100vh;
+  width: 100%;
 }
 
 #main > header h3 {
