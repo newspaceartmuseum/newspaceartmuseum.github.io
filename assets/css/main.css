@@ -175,8 +175,8 @@ nav ul li:hover::after {
   }
 
   #main > header h3 {
-    font-size: 2.5rem;
-    padding: 1rem;
+    font-size: 1.5rem;
+    padding: 0.8rem;
   }
 } 
 
