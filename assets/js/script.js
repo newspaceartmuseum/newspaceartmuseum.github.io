@@ -21,6 +21,46 @@ var oDiv=null;
 window.onload=function ()
 {
 	console.log("onload");
+	var modal = document.getElementById('user-form-modal');
+	var closeBtn = document.getElementById('close-form-btn');
+	var userForm = document.getElementById('user-form');
+	var thankYouMsg = document.getElementById('thank-you-message');
+
+	// 页面加载后1秒弹窗（带动画）
+	if (modal) {
+		setTimeout(function() {
+			modal.style.display = 'flex';
+			setTimeout(function() {
+				modal.classList.add('modal-visible');
+			}, 10);
+			if(userForm) userForm.style.display = 'block';
+			if(thankYouMsg) thankYouMsg.style.display = 'none';
+		}, 1000);
+	}
+
+	function hideModal() {
+		if (!modal) return;
+		modal.classList.remove('modal-visible');
+		setTimeout(function() {
+			modal.style.display = 'none';
+		}, 400);
+	}
+
+	if (closeBtn && modal) {
+		closeBtn.onclick = function() {
+			hideModal();
+		};
+	}
+	if (userForm && thankYouMsg && modal) {
+		userForm.addEventListener('submit', function(e) {
+			e.preventDefault();
+			userForm.style.display = 'none';
+			thankYouMsg.style.display = 'block';
+			setTimeout(function() {
+				hideModal();
+			}, 1800);
+		});
+	}
 	var i=0;
 	var oTag=null;
 	
