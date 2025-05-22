@@ -245,4 +245,52 @@ nav ul li:hover::after {
 			padding: 0.4em 0.8em;
 			}
 		}
+/* 表单样式 */
+#form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    z-index: 2;
+}
 
+#form-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#form-container input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+#form-container input[type="submit"] {
+    background-color: #ffd700;
+    color: black;
+    cursor: pointer;
+}
+
+#form-container input[type="submit"]:hover {
+    background-color: #e6c200;
+}
+
+/* 感谢信息样式 */
+#thank-you-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
