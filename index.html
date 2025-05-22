@@ -20,20 +20,29 @@
 		<!-- 表单 -->
 		<div id="form-container">
 			<form id="user-info-form">
-				<label for="name">姓名:</label>
-				<input type="text" id="name" name="name" required><br>
-				<label for="region">所在地区:</label>
-				<input type="text" id="region" name="region" required><br>
-				<label for="country">国籍:</label>
-				<input type="text" id="country" name="country" required><br>
-				<label for="email">邮箱:</label>
-				<input type="email" id="email" name="email" required><br>
-				<input type="submit" value="提交">
+				<div class="form-field">
+					<label for="name">姓名 / Name:</label>
+					<input type="text" id="name" name="name" required>
+				</div>
+				<div class="form-field">
+					<label for="region">所在地区 / Region:</label>
+					<input type="text" id="region" name="region" required>
+				</div>
+				<div class="form-field">
+					<label for="country">国籍 / Country:</label>
+					<input type="text" id="country" name="country" required>
+				</div>
+				<div class="form-field">
+					<label for="email">邮箱 / Email:</label>
+					<input type="email" id="email" name="email" required>
+				</div>
+				<input type="submit" value="提交 / Submit">
 			</form>
 		</div>
 		<!-- 感谢信息 -->
 		<div id="thank-you-message" style="display: none;">
 			<p>感谢您的关注！我们非常高兴能够与您分享本活动的最新信息。期待您继续关注新太空艺术博物馆的精彩内容！</p>
+			<p>Thank you for your attention! We are very glad to share the latest information of this event with you. We look forward to your continued attention to the wonderful content of the New Space Art Museum!</p>
 		</div>
 		<!-- 原页面内容 -->
 		<div id="original-content" style="display: none;">
@@ -101,10 +110,12 @@
 					$('#form-container').hide();
 					// 显示感谢信息
 					$('#thank-you-message').show();
-					// 一段时间后显示原页面内容
-					setTimeout(function() {
-						$('#original-content').show();
-					}, 3000);
+				});
+
+				$('#thank-you-message').on('click', function() {
+					// 点击感谢信息后隐藏感谢信息并显示原页面内容
+					$(this).hide();
+					$('#original-content').show();
 				});
 			});
 		</script>
