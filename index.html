@@ -1,123 +1,121 @@
 <!DOCTYPE HTML>
 
 <html>
-	<head>
-		<title>新太空艺术博物馆</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!-- Favicon -->
-		<link rel="icon" type="image/png" href="images/icon.png" />
-		<!-- Web Fonts -->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" />
-		<!-- Stylesheet -->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!-- Script -->
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<script src="assets/js/script.js"></script>
-	</head>
-	<body class="is-preload">
-		<!-- 表单 -->
-		<div id="form-container">
-			<form id="user-info-form">
-				<div class="form-field">
-					<label for="name">姓名 / Name:</label>
-					<input type="text" id="name" name="name" required>
-				</div>
-				<div class="form-field">
-					<label for="region">所在地区 / Region:</label>
-					<input type="text" id="region" name="region" required>
-				</div>
-				<div class="form-field">
-					<label for="country">国籍 / Country:</label>
-					<input type="text" id="country" name="country" required>
-				</div>
-				<div class="form-field">
-					<label for="email">邮箱 / Email:</label>
-					<input type="email" id="email" name="email" required>
-				</div>
-				<input type="submit" value="提交 / Submit">
-			</form>
-		</div>
-		<!-- 感谢信息 -->
-		<div id="thank-you-message" style="display: none;">
-			<p>感谢您的关注！我们非常高兴能够与您分享本活动的最新信息。期待您继续关注新太空艺术博物馆的精彩内容！</p>
-			<p>Thank you for your attention! We are very glad to share the latest information of this event with you. We look forward to your continued attention to the wonderful content of the New Space Art Museum!</p>
-		</div>
-		<!-- 原页面内容 -->
-		<div id="original-content" style="display: none;">
-			<!-- Header -->
-			<div id="header">
-				<h2>-DESIGN FUTURES-</h2>
-				<br>
-				<br>
-				<h1>新太空艺术博物馆</h1>
-				<h3>New Space Art Museum</h3>
-				<br>
-				<br>
-				<br>
-				<p>科技 · 艺术 · 太空 · 全球共创</p>
-				<h4>Technology · Art · Space · Global Co-Creation</h4>
-				<br>
-			</div>
-			<!-- Main -->
-			<div id="general">
-				<div id="main">
-					<header>
-						<h3>新太空艺术博物馆旨在通过共创与卫星联动的方式，
-						    与国际青年共创网络联动，建立人类文明的数字档案。
-						    <br>
-						    <br>
-						    The New Space Art Museum is dedicated to building 
-						    a digital archive of human civilization by integrating
-						    <br> global co-creation, satellite interaction, and 
-						    collaboration with an international network of young creators.
-						</h3>
-					</header>
-					<div id="tagbox">
-						<a target="_blank">敬请期待</a>
-						<a target="_blank">敬請期待</a>
-						<a target="_blank">Coming Soon</a>
-						<a target="_blank">Próximamente</a>
-						<a target="_blank">敬请期待</a>
-						<a target="_blank">敬請期待</a>
-						<a target="_blank">Скоро будет</a>
-						<a target="_blank">Em breve</a>
-						<a target="_blank">Prossimamente</a>
-						<a target="_blank">近日公開</a>		
-						<a target="_blank">곧 공개됩니다</a>
-						<a target="_blank">敬请期待</a>
-						<a target="_blank">เร็วๆ นี้</a>
-						<a target="_blank">Sắp ra mắt</a>
-						<a target="_blank">Segera hadir</a>
-						<a target="_blank">Akan datang</a>	
-						<a target="_blank">Kommer snart</a>
-						<a target="_blank">敬请期待</a>
-						<a target="_blank">Coming Soon</a>
-						<a target="_blank">Çok yakında</a>
-						<a target="_blank">Coming Soon</a>
-						<a target="_blank">În curând</a>
-						<a target="_blank">Už čoskoro</a> 
-					</div>
-				</div>
-			</div>
-		</div>
-		<script>
-			$(document).ready(function() {
-				$('#user-info-form').on('submit', function(e) {
-					e.preventDefault();
-					// 隐藏表单
-					$('#form-container').hide();
-					// 显示感谢信息
-					$('#thank-you-message').show();
-				});
+    <head>
+        <title>新太空艺术博物馆</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <style type="text/css">
 
-				$('#thank-you-message').on('click', function() {
-					// 点击感谢信息后隐藏感谢信息并显示原页面内容
-					$(this).hide();
-					$('#original-content').show();
-				});
-			});
-		</script>
-	</body>
+        </style>
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="images/icon.png" />
+        <!-- Web Fonts -->
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" />
+        <!-- Stylesheet -->
+            <link rel="stylesheet" href="assets/css/main.css" />
+        <!-- Script -->
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="assets/js/script.js"></script>
+
+
+    </head>
+    <body class="is-preload">
+
+        <!-- Header -->
+        <div id="header">
+            
+            <!--navigation -->
+            <!--
+            <nav>
+            <ul>
+                <li>首页</li>
+                <li>项目介绍</li>
+                <li>作品展示</li>
+                <li>参与方式</li>	
+                <li>关于我们</li>
+            </ul>
+            </nav>
+                        -->
+
+            <h2>-DESIGN FUTURES-</h2>
+            <br>
+            <br>
+            <h1>新太空艺术博物馆</h1>
+            
+            <h3>New Space Art Museum</h3>
+            <br>
+            <br>
+            <br>
+            <p>科技 · 艺术 · 太空 · 全球共创</p>
+            <h4>Technology · Art · Space · Global Co-Creation</h4>
+            <br>
+        </div>
+
+        <!-- Main -->
+         <div id="general">
+            <div id="main">
+                <header >
+                    <h3>新太空艺术博物馆旨在通过共创与卫星联动的方式，
+                        与国际青年共创网络联动，建立人类文明的数字档案。
+                        <br>
+                        <br>
+                        The New Space Art Museum is dedicated to building 
+                        a digital archive of human civilization by integrating
+                        <br> global co-creation, satellite interaction, and 
+                        collaboration with an international network of young creators.
+                    </h3>
+                    
+                </header>
+
+                <div id="tagbox">
+                    <a target="_blank">敬请期待</a>
+                    <a   target="_blank">敬請期待</a>
+                    <a   target="_blank">Coming Soon</a>
+                    <a   target="_blank">Próximamente</a>
+                    <a   target="_blank">敬请期待</a>
+                    <a   target="_blank">敬請期待</a>
+                    <a   target="_blank">Скоро будет</a>
+                    <a   target="_blank">Em breve</a>
+                    <a   target="_blank">Prossimamente</a>
+                    <a   target="_blank">近日公開</a>		
+                    <a   target="_blank">곧 공개됩니다</a>
+                    <a target="_blank">敬请期待</a>
+                    <a   target="_blank">เร็วๆ นี้</a>
+                    <a   target="_blank">Sắp ra mắt</a>
+                    <a   target="_blank">Segera hadir</a>
+                    <a   target="_blank">Akan datang</a>	
+                    <a   target="_blank">Kommer snart</a>
+                    <a target="_blank">敬请期待</a>
+                    <a   target="_blank">Coming Soon</a>
+                    <a   target="_blank">Çok yakında</a>
+                    <a   target="_blank">Coming Soon</a>
+                    <a   target="_blank">În curând</a>
+                    <a   target="_blank">Už čoskoro</a> 
+                </div>
+            </div>
+        <!-- 表单弹窗 -->
+<div id="user-form-modal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); align-items:center; justify-content:center;">
+    <div class="form-container">
+        <button id="close-form-btn" style="position:absolute; top:1rem; right:1rem; background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer;">×</button>
+        <form id="user-form" class="form">
+            <span class="heading">欢迎参与 <span class="orange">New Space Art Museum</span></span>
+            <input type="text" name="name" class="input" placeholder="名字 / Name" required />
+            <input type="text" name="region" class="input" placeholder="所在地区 / Region" required />
+            <input type="text" name="nationality" class="input" placeholder="国籍 / Nationality" required />
+            <input type="email" name="email" class="input" placeholder="邮箱 / Email" required />
+            <div class="button-container">
+                <button type="submit" class="send-button">提交 / Submit</button>
+            </div>
+        </form>
+        <div id="thank-you-message" style="display:none; color:#fff; text-align:center; font-size:1.2rem; padding:2rem;">
+            <p>谢谢你的关注，我们很高兴与你更新本活动最新信息。</p>
+            <p>Thank you for your attention. We are glad to update you on the latest information of this event.</p>
+        </div>
+    </div>
+</div>
+            
+
+    </body>
 </html>
