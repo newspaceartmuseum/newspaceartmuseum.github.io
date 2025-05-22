@@ -1,3 +1,66 @@
+/*========navigation========*/
+/*
+nav {
+	background: rgba(0, 0, 0, 0.7); 
+	opacity: 0.5;
+	padding: 0.3rem 1.5rem;
+	box-shadow: 0 1.5rem 1rem -0.8rem rgba(0, 0, 0, 0.2);
+	position: fixed;
+	top: 0.7rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	max-width: 1200px; 
+	min-width: 0;
+	z-index: 1000;
+}
+nav ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+nav ul li {
+	list-style: none;
+	display: inline-block;
+	padding: 0.5rem 1.2rem;
+	margin: 0 0.3rem;
+	font-size: 1rem;
+	font-weight: 500;
+	color: #fff; 
+	cursor: pointer;
+	position: relative;
+	z-index: 2;
+	transition: color 0.5s;
+}
+nav ul li::after {
+	content: '';
+	background: rgba(255,255,255,0.15);
+	width: 100%;
+	height: 100%;
+	border-radius: 1.2rem;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+	opacity: 0;
+	transition: top 0.5s, opacity 0.5s;
+}
+nav ul li:hover {
+	color: #ffd700;
+}
+nav ul li:hover::after {
+	top: 20%;
+	opacity: 1;
+}
+*/
+
+
+
+
 /* ========== Header Section ========== */
 #header {
 	background-image: url('../../images/background2.png');
@@ -183,56 +246,193 @@
 			}
 		}
 
-/* 表单样式 */
-#form-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    color: white;
-    z-index: 2;
+/* 表单弹窗样式 */
+#user-form-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.6);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s cubic-bezier(.4,0,.2,1);
 }
-
-#form-container .form-field {
-    margin-bottom: 15px;
+#user-form-modal.modal-visible {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
 }
-
-#form-container label {
-    display: block;
-    margin-bottom: 5px;
+#user-form-modal .form-container {
+    transform: translateY(40px) scale(0.98);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(.4,0,.2,1);
 }
-
-#form-container input {
-    width: 100%;
-    padding: 8px;
-    border: none;
-    border-radius: 5px;
+#user-form-modal.modal-visible .form-container {
+    transform: translateY(0) scale(1);
+    opacity: 1;
 }
-
-#form-container input[type="submit"] {
-    background-color: #ffd700;
-    color: black;
-    cursor: pointer;
-}
-
-#form-container input[type="submit"]:hover {
-    background-color: #e6c200;
-}
-
-/* 感谢信息样式 */
-#thank-you-message {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    color: white;
+#user-form-modal .form-title {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 1.2rem;
     text-align: center;
-    z-index: 2;
+}
+#user-form-modal .title-2 {
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 0.2rem;
+}
+#user-form-modal .input-container {
+    margin-bottom: 1rem;
+}
+#user-form-modal input[type="text"],
+#user-form-modal input[type="email"] {
+    width: 100%;
+    padding: 0.7em 1em;
+    border-radius: 1.2em;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-top: 0.2em;
+    background: #fff;
+    color: #222;
+    outline: none;
+    box-sizing: border-box;
+}
+#user-form-modal .submit {
+    width: 100%;
+    padding: 0.7em 0;
+    border-radius: 2em;
+    border: none;
+    background: #ffd700;
+    color: #222;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 0.5em;
+    transition: background 0.2s;
+}
+#user-form-modal .submit:hover {
+    background: #ffe066;
+}
+#close-form-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
     cursor: pointer;
 }
+@media (max-width: 600px) {
+    #user-form-modal > div {
+        padding: 1.2rem 0.5rem 1.5rem 0.5rem !important;
+        min-width: 0;
+    }
+}
+
+/* From Uiverse.io by Smit-Prajapati */
+.orange {
+  color: #6685a8;
+}
+
+.form-container {
+  max-width: 700px;
+  margin: 30px;
+  background-color: rgba(0, 25, 37, 0.85); /* 半透明深色背景 */
+  padding: 30px;
+  border-left: 5px solid #18314e;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+  position: relative;
+}
+
+.heading {
+  display: block;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.form-container .form .input {
+  color: #87a4b6;
+  width: 100%;
+  background-color: #002733;
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+  border-left: 1px solid transparent;
+}
+
+.form-container .form .input:focus {
+  border-left: 5px solid #18314e;
+}
+
+.form-container .form .textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #013747;
+  color:  #18314e;
+  font-weight: bold;
+  resize: none;
+  max-height: 150px;
+  margin-bottom: 20px;
+  border-left: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-container .form .textarea:focus {
+  border-left: 5px solid #18314e;
+}
+
+.form-container .form .button-container {
+  display: flex;
+  gap: 10px;
+}
+
+.form-container .form .button-container .send-button {
+  flex-basis: 70%;
+  background: #324a66;
+  padding: 10px;
+  color: #001925;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-container .form .button-container .send-button:hover {
+  background: transparent;
+  border: 1px solid #4674a9;
+  color: #4674a9;
+}
+
+.form-container .form .button-container .reset-button-container {
+  filter: drop-shadow(1px 1px 0px #18314e);
+  flex-basis: 30%;
+}
+
+.form-container .form .button-container .reset-button-container .reset-button {
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  color: #18314e;
+  font-weight: bold;
+  background: #001925;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+  transition: all 0.2s ease-in-out;
+}
+
+.form-container .form .button-container .reset-button-container .reset-button:hover {
+  background: #18314e;
+  color: #001925;
+}
+
