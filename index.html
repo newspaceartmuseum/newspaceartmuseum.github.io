@@ -6,98 +6,107 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<style type="text/css">
-
-		</style>
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" href="images/icon.png" />
 		<!-- Web Fonts -->
-			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" />
 		<!-- Stylesheet -->
-			<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/main.css" />
 		<!-- Script -->
-			<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-			<script src="assets/js/script.js"></script>
-
-
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="assets/js/script.js"></script>
 	</head>
 	<body class="is-preload">
-
-		<!-- Header -->
-		<div id="header">
-			
-			<!--navigation -->
-			<!--
-			<nav>
-			<ul>
-				<li>首页</li>
-				<li>项目介绍</li>
-				<li>作品展示</li>
-				<li>参与方式</li>	
-				<li>关于我们</li>
-			</ul>
-			</nav>
-                        -->
-
-			<h2>-DESIGN FUTURES-</h2>
-			<br>
-			<br>
-			<h1>新太空艺术博物馆</h1>
-			
-			<h3>New Space Art Museum</h3>
-			<br>
-			<br>
-			<br>
-			<p>科技 · 艺术 · 太空 · 全球共创</p>
-			<h4>Technology · Art · Space · Global Co-Creation</h4>
-			<br>
+		<!-- 表单 -->
+		<div id="form-container">
+			<form id="user-info-form">
+				<label for="name">姓名:</label>
+				<input type="text" id="name" name="name" required><br>
+				<label for="region">所在地区:</label>
+				<input type="text" id="region" name="region" required><br>
+				<label for="country">国籍:</label>
+				<input type="text" id="country" name="country" required><br>
+				<label for="email">邮箱:</label>
+				<input type="email" id="email" name="email" required><br>
+				<input type="submit" value="提交">
+			</form>
 		</div>
-
-		<!-- Main -->
-		 <div id="general">
-			<div id="main">
-<!--class="major container medium"-->
-				<header >
-					<h3>新太空艺术博物馆旨在通过共创与卫星联动的方式，
-					    与国际青年共创网络联动，建立人类文明的数字档案。
-					    <br>
-					    <br>
-					    The New Space Art Museum is dedicated to building 
-					    a digital archive of human civilization by integrating
-					    <br> global co-creation, satellite interaction, and 
-					    collaboration with an international network of young creators.
-					</h3>
-					
-				</header>
-
-				<div id="tagbox">
-					<a target="_blank">敬请期待</a>
-					<a   target="_blank">敬請期待</a>
-					<a   target="_blank">Coming Soon</a>
-					<a   target="_blank">Próximamente</a>
-					<a   target="_blank">敬请期待</a>
-					<a   target="_blank">敬請期待</a>
-					<a   target="_blank">Скоро будет</a>
-					<a   target="_blank">Em breve</a>
-					<a   target="_blank">Prossimamente</a>
-					<a   target="_blank">近日公開</a>		
-					<a   target="_blank">곧 공개됩니다</a>
-					<a target="_blank">敬请期待</a>
-					<a   target="_blank">เร็วๆ นี้</a>
-					<a   target="_blank">Sắp ra mắt</a>
-					<a   target="_blank">Segera hadir</a>
-					<a   target="_blank">Akan datang</a>	
-					<a   target="_blank">Kommer snart</a>
-					<a target="_blank">敬请期待</a>
-					<a   target="_blank">Coming Soon</a>
-					<a   target="_blank">Çok yakında</a>
-					<a   target="_blank">Coming Soon</a>
-					<a   target="_blank">În curând</a>
-					<a   target="_blank">Už čoskoro</a> 
-			    </div>
+		<!-- 感谢信息 -->
+		<div id="thank-you-message" style="display: none;">
+			<p>感谢您的关注！我们非常高兴能够与您分享本活动的最新信息。期待您继续关注新太空艺术博物馆的精彩内容！</p>
+		</div>
+		<!-- 原页面内容 -->
+		<div id="original-content" style="display: none;">
+			<!-- Header -->
+			<div id="header">
+				<h2>-DESIGN FUTURES-</h2>
+				<br>
+				<br>
+				<h1>新太空艺术博物馆</h1>
+				<h3>New Space Art Museum</h3>
+				<br>
+				<br>
+				<br>
+				<p>科技 · 艺术 · 太空 · 全球共创</p>
+				<h4>Technology · Art · Space · Global Co-Creation</h4>
+				<br>
 			</div>
-		
-			
-
+			<!-- Main -->
+			<div id="general">
+				<div id="main">
+					<header>
+						<h3>新太空艺术博物馆旨在通过共创与卫星联动的方式，
+						    与国际青年共创网络联动，建立人类文明的数字档案。
+						    <br>
+						    <br>
+						    The New Space Art Museum is dedicated to building 
+						    a digital archive of human civilization by integrating
+						    <br> global co-creation, satellite interaction, and 
+						    collaboration with an international network of young creators.
+						</h3>
+					</header>
+					<div id="tagbox">
+						<a target="_blank">敬请期待</a>
+						<a target="_blank">敬請期待</a>
+						<a target="_blank">Coming Soon</a>
+						<a target="_blank">Próximamente</a>
+						<a target="_blank">敬请期待</a>
+						<a target="_blank">敬請期待</a>
+						<a target="_blank">Скоро будет</a>
+						<a target="_blank">Em breve</a>
+						<a target="_blank">Prossimamente</a>
+						<a target="_blank">近日公開</a>		
+						<a target="_blank">곧 공개됩니다</a>
+						<a target="_blank">敬请期待</a>
+						<a target="_blank">เร็วๆ นี้</a>
+						<a target="_blank">Sắp ra mắt</a>
+						<a target="_blank">Segera hadir</a>
+						<a target="_blank">Akan datang</a>	
+						<a target="_blank">Kommer snart</a>
+						<a target="_blank">敬请期待</a>
+						<a target="_blank">Coming Soon</a>
+						<a target="_blank">Çok yakında</a>
+						<a target="_blank">Coming Soon</a>
+						<a target="_blank">În curând</a>
+						<a target="_blank">Už čoskoro</a> 
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(document).ready(function() {
+				$('#user-info-form').on('submit', function(e) {
+					e.preventDefault();
+					// 隐藏表单
+					$('#form-container').hide();
+					// 显示感谢信息
+					$('#thank-you-message').show();
+					// 一段时间后显示原页面内容
+					setTimeout(function() {
+						$('#original-content').show();
+					}, 3000);
+				});
+			});
+		</script>
 	</body>
 </html>
