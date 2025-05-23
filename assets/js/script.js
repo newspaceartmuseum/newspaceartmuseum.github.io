@@ -51,16 +51,76 @@ window.onload=function ()
 			hideModal();
 		};
 	}
-	if (userForm && thankYouMsg && modal) {
-		userForm.addEventListener('submit', function(e) {
-			e.preventDefault();
-			userForm.style.display = 'none';
-			thankYouMsg.style.display = 'block';
-			setTimeout(function() {
-				hideModal();
-			}, 1800);
-		});
-	}
+	// 在原有的script.js文件中找到userForm的submit事件处理函数，修改为：
+
+if (userForm && thankYouMsg && modal) {
+    userForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // 收集表单数据
+        const formData = new FormData(userForm);
+        const data = Object.fromEntries(formData.entries());
+        
+        // 显示加载状态
+        const submitButton = userForm.querySelector('button[type="submit"]');
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = '提交中...';
+        }
+        
+        // 发送数据到后端
+        fetch('/submit_form', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('网络响应失败');
+            }
+            return response.json();
+        })
+        .then(result => {
+            console.log('提交结果:', result);
+            // 无论成功还是失败都显示感谢信息
+            userForm.style.display = 'none';
+            thankYouMsg.style.display = 'block';
+            
+            // 2秒后关闭弹窗
+            setTimeout(function() {
+                hideModal();
+                // 重置表单和按钮状态
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.textContent = '提交 / Submit';
+                }
+                userForm.reset();
+            }, 2000);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            // 错误处理，可以显示错误信息给用户
+            userForm.style.display = 'none';
+            
+            // 显示错误信息
+            if (thankYouMsg) {
+                thankYouMsg.innerHTML = `
+                    <p>提交失败，请稍后再试。</p>
+                    <p>Error: ${error.message}</p>
+                `;
+                thankYouMsg.style.display = 'block';
+            }
+            
+            setTimeout(function() {
+                hideModal();
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.textContent = '提交 / Submit';
+                }
+                userForm.reset();
+            }, 3000);
+        });
+    });
+}
 	var i=0;
 	var oTag=null;
 	
