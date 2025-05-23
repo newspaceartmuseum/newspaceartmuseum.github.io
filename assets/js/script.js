@@ -69,9 +69,9 @@ if (userForm && thankYouMsg && modal) {
         }
         
         // 发送数据到后端
-        fetch('/submit_form', {
-            method: 'POST',
-            body: formData
+       fetch('http://localhost:5000/submit_form', {  // 完整URL（含域名和端口）
+           method: 'POST',
+           body: new FormData(userForm)
         })
         .then(response => {
             if (!response.ok) {
